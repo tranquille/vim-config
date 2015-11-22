@@ -32,6 +32,8 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-latex/vim-latex'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax' 
 Plugin 'vim-scripts/SearchComplete'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
