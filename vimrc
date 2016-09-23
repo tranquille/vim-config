@@ -20,6 +20,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'othree/yajs.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-commentary'
@@ -83,6 +85,11 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 " Gundo Mapping
 nnoremap <F5> :GundoToggle<CR>
+
+" Vimdiff settings
+map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>
+map <silent> <leader>3 :diffget 3<CR> :diffupdate<CR>
+map <silent> <leader>4 :diffget 4<CR> :diffupdate<CR>
 
 " Vim Latex settings
 
