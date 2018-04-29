@@ -17,11 +17,20 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mattn/emmet-vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'othree/es.next.syntax.vim'
-Plugin 'othree/yajs.vim'
+"Plugin 'easymotion/vim-easymotion'
+"Plugin 'mattn/emmet-vim'
+"Plugin 'mileszs/ack.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'leshill/vim-json'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'prettier/vim-prettier'
+Plugin 'shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'bling/vim-airline'
+Plugin 'w0rp/ale.git'
+"Plugin 'othree/es.next.syntax.vim'
+"Plugin 'othree/yajs.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-commentary'
@@ -33,9 +42,9 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-latex/vim-latex'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax' 
+"Plugin 'vim-latex/vim-latex'
+"Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc-syntax' 
 Plugin 'vim-scripts/SearchComplete'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -91,6 +100,20 @@ map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>
 map <silent> <leader>3 :diffget 3<CR> :diffupdate<CR>
 map <silent> <leader>4 :diffget 4<CR> :diffupdate<CR>
 
+" Editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*','scp://.*']
+
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" ALE
+let g:ale_fixers = {
+            \ 'javascript': ['prettier-eslint'],
+            \}
 " Vim Latex settings
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
